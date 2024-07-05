@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static',filename='images/logo.png')}}" type="image/x-icon">
+    <title>WordEmotion-About</title>
+    <style>
+        p{
+            font-size: 20px;
+        }
+        li{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="{{url_for('static',filename='images/logo.png')}}" alt="logo" height="45px" width="45px">
+                <h2>WordEmotion</h2>
+            </div>
+            <div class="options">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="mailto: tomayu157@gmail.com">Contact Us</a>
+            </div>
+            <div class="predict-btn">
+                <button onclick="predict()">Try Model </button>
+            </div>
+        </nav>
+        <div class="main" style="padding: 4em; flex-direction: column; align-items: start;">
+            <h1 style="color: red;">About Me</h1>
+
+            <p>Welcome to my website! I am passionate about leveraging technology to understand and interpret human emotions. With a background in machine learning and artificial intelligence, I have developed a deep neural network model that can predict emotions from text input.</p>
+            <h2 style="color: red;">My Project</h2>
+            <p>This project utilizes a Long Short-Term Memory (LSTM) network, a type of recurrent neural network (RNN) that is particularly effective for sequence prediction problems. By training this model on a diverse dataset, it can accurately identify and predict various human emotions based on the text provided.</p>
+            <h2 style="color: red;">How It Works</h2>
+            <li><b>Deep Neural Network:</b> The core of the project is a deep neural network that processes and analyzes text data.</li>
+            <li><b>LSTM:</b> The LSTM architecture helps in capturing the context and nuances of the text, making the emotion prediction more accurate.</li>
+            <li><b>Embeddings:</b> To enhance the model’s understanding, text embeddings are used. These embeddings convert words into numerical vectors, capturing their meanings and relationships.</li>
+            <h2 style="color: red;">Why This Matters</h2>
+            <p>Understanding emotions is crucial in many applications, from customer service to mental health. By accurately predicting emotions from text, this project aims to bridge the gap between human communication and machine understanding, making interactions more empathetic and effective.</p>
+            <p>Thank you for visiting my website. I hope you find this project as fascinating as I do</p>
+
+        </div>
+
+
+        <canvas id="dotsCanvas"></canvas>
+    </div>
+    <script src="{{url_for('static',filename='js/animation.js')}}"></script>
+    <script>
+        function predict(){
+                window.location.href = "/predict";
+            }
+    </script>
+</body>
+</html>

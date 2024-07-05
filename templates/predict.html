@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/predict.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static',filename='images/logo.png')}}" type="image/x-icon">
+    <title>WordEmotion-predict</title>
+</head>
+
+<body>
+    <div class="banner">
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="{{url_for('static',filename='images/logo.png')}}" alt="logo" height="45px" width="45px">
+                <h2>WordEmotion</h2>
+            </div>
+            <div class="options">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="mailto: tomayu157@gmail.com">Contact Us</a>
+            </div>
+            <div class="predict-btn">
+                <button onclick="portfolio()">My Portfolio</button>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="left">
+                <div class="boxarea">
+                    <div class="code-loader">
+                        <span>{</span><span>}</span>
+                    </div>
+                    <div class="textpredicted">You Look<h1 id="output">??</h1></div>
+                </div>
+                <form  style="width: 100%;">
+                    <div class="input-container">
+                        <input type="text" class="input" placeholder="ENTER YOUR FEELINGS HERE..." maxlength="500" id="test" name="test" required>
+                        <span class="icon">
+                            <input type="submit" name="" style="display: none;">
+                            <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path opacity="1" d="M14 5H20" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path opacity="1" d="M14 8H17" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2"
+                                        stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path opacity="1" d="M22 22L20 20" stroke="#fff" stroke-width="3.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                    <span>Press Enter To Predict</span>
+                </form>
+            </div>
+            <div class="right">
+                <!-- <h1>Entered text</h1> -->
+                <div class="card" id="quote" title="CLICK TO REFRESH QUOTES">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="card-inner" >
+                        <h2 id="Enteredtext">QUOTE</h2><br>
+                        <p id="enteredtextpara">"As long as I focus on what I feel and don't worry about where I'm going, it works out. Having no expectations but being open to everything is what makes wonderful things happen. If I don't worry, there's no obstruction and life flows easily. It sounds impractical, but 'Expect nothing; be open to everything' is really all it is."<br><br>- Marketa Irglova</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <canvas id="dotsCanvas"></canvas>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{url_for('static',filename='js/animation.js')}}"></script>
+    <script src="{{url_for('static',filename='js/predict.js')}}"></script>
+    <script>
+        function portfolio(){
+                window.location.href = "https://ayushman-tomar.netlify.app/";
+            }
+    </script>
+    
+</body>
+
+</html>
