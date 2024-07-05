@@ -62,4 +62,4 @@ def prediction_emotion(text):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
